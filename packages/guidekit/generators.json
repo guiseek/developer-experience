@@ -4,6 +4,11 @@
       "factory": "./src/generators/doc/generator",
       "schema": "./src/generators/doc/schema.json",
       "description": "Generate doc"
+    },
+    "log": {
+      "factory": "./src/generators/log/generator",
+      "schema": "./src/generators/log/schema.json",
+      "description": "Generate changelog page"
     }
   }
 }
