@@ -1,0 +1,44 @@
+{
+  "name": "release",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "packages/release/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nx/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/packages/release",
+        "main": "packages/release/src/index.ts",
+        "tsConfig": "packages/release/tsconfig.lib.json",
+        "assets": ["packages/release/*.md"]
+      }
+    },
+    "publish": {
+      "command": "node tools/scripts/publish.mjs release {args.ver} {args.tag}",
+      "dependsOn": ["build"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "packages/release/jest.config.ts"
+      }
+    },
+    "github": {
+      "executor": "@semantic-versioning/release:github",
+      "configurations": {
+        "development": {
+          "dryRun": true,
+          "verbose": true
+        },
+        "production": {
+          "dryRun": false,
+          "verbose": true
+        }
+      },
+      "defaultConfiguration": "development"
+    }
+  },
+  "tags": []
+}

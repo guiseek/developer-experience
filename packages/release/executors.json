@@ -1,0 +1,9 @@
+{
+  "executors": {
+    "github": {
+      "implementation": "./src/executors/github/executor",
+      "schema": "./src/executors/github/schema.json",
+      "description": "github executor"
+    }
+  }
+}

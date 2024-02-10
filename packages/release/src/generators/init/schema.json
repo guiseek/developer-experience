@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "Init",
+  "title": "Nx release init",
+  "type": "object",
+  "properties": {
+    "relationship": {
+      "type": "string",
+      "description": "Projects relationship",
+      "$default": {
+        "$source": "argv",
+        "index": 0
+      },
+      "enum": [
+        "fixed",
+        "independent"
+      ],
+      "default": "fixed",
+      "x-prompt": "What is the versioning relationship between packages?"
+    },
+    "conventional": {
+      "type": "boolean",
+      "default": true,
+      "description": "Conventional commits",
+      "x-prompt": "Would you like to use conventional commits?"
+    }
+  },
+  "required": []
+}
