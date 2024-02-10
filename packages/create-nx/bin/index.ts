@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import { createWorkspace } from 'create-nx-workspace';
+import { detectInvokedPackageManager } from 'create-nx-workspace/src/utils/package-manager';
 
 async function main() {
   const name = process.argv[2]; // TODO: use libraries like yargs or enquirer to set your workspace name
@@ -20,7 +21,7 @@ async function main() {
     {
       name,
       nxCloud: 'skip',
-      packageManager: 'npm',
+      packageManager: detectInvokedPackageManager() ?? 'npm',
     }
   );
 
