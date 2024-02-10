@@ -1,0 +1,29 @@
+{
+  "name": "@developer-experience/design",
+  "version": "0.0.0",
+  "description": "Design for the best developer experience",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "private": false,
+  "license": "MIT",
+  "author": {
+    "name": "Guilherme Siquinelli",
+    "email": "email@guiseek.com",
+    "url": "https://guiseek.dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guiseek/developer-experience",
+    "directory": "packages/design"
+  },
+  "dependencies": {
+    "@nx/devkit": "18.0.4",
+    "tslib": "^2.3.0"
+  },
+  "type": "commonjs",
+  "main": "./src/index.js",
+  "typings": "./src/index.d.ts",
+  "generators": "./generators.json"
+}

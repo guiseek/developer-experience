@@ -1,0 +1,29 @@
+{
+  "generators": {
+    "creational": {
+      "factory": "./src/generators/creational/generator",
+      "schema": "./src/generators/creational/schema.json",
+      "description": "Creational Design Patterns"
+    },
+    "structural": {
+      "factory": "./src/generators/structural/generator",
+      "schema": "./src/generators/structural/schema.json",
+      "description": "Structural Design Patterns"
+    },
+    "behavioral": {
+      "factory": "./src/generators/behavioral/generator",
+      "schema": "./src/generators/behavioral/schema.json",
+      "description": "Behavioral Design Patterns"
+    },
+    "init": {
+      "factory": "./src/generators/init/generator",
+      "schema": "./src/generators/init/schema.json",
+      "description": "Setup plugin"
+    },
+    "contribute": {
+      "factory": "./src/generators/contribute/generator",
+      "schema": "./src/generators/contribute/schema.json",
+      "description": "Contribute"
+    }
+  }
+}
