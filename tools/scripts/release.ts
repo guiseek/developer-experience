@@ -14,7 +14,7 @@ import * as yargs from 'yargs';
       description:
         'Whether or not to perform a dry-run of the release process, defaults to true',
       type: 'boolean',
-      default: true,
+      default: false,
     })
     .option('verbose', {
       description:
