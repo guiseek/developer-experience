@@ -18,7 +18,8 @@
     "nx-release-publish": {
       "options": {
         "packageRoot": "dist/packages/{projectName}"
-      }
+      },
+      "dependsOn": ["^build"]
     },
     "@nx/js:tsc": {
       "cache": true,
