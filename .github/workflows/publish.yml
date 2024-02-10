@@ -39,7 +39,7 @@ jobs:
         shell: bash
 
       - name: Publish packages
-        run: pnpm release
+        run: npx nx release
         shell: bash
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
