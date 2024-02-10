@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@developer-experience/guidekit": ["packages/guidekit/src/index.ts"],
+      "@semantic-versioning/release": ["packages/release/src/index.ts"],
       "developer-experience": ["packages/developer-experience/src/index.ts"]
     }
   },

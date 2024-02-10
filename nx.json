@@ -61,5 +61,24 @@
       ]
     }
   },
-  "nxCloudAccessToken": "OWI5Y2MyNjUtNzJmZC00ODdlLWIxOWItOTQ2ZWFjNWNhZmNhfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "OWI5Y2MyNjUtNzJmZC00ODdlLWIxOWItOTQ2ZWFjNWNhZmNhfHJlYWQtd3JpdGU=",
+  "release": {
+    "projects": [
+      "packages/*",
+      "!developer-experience-e2e"
+    ],
+    "projectsRelationship": "fixed",
+    "releaseTagPattern": "{version}",
+    "version": {
+      "conventionalCommits": true
+    }
+  },
+  "plugins": [
+    {
+      "plugin": "@nx/eslint/plugin",
+      "options": {
+        "targetName": "lint"
+      }
+    }
+  ]
 }
