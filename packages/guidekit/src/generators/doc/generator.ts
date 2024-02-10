@@ -52,7 +52,9 @@ export async function docGenerator(tree: Tree, options: DocGeneratorSchema) {
   /**
    * Update .gitignore with .astro (generates types)
    */
-  const content = tree.read('.gitignore').toString('utf-8');
+  const content = tree.exists('.gitignore')
+    ? tree.read('.gitignore').toString('utf-8')
+    : ['dist', 'node_modules'].join('\n');
 
   if (content && !content.includes('.astro')) {
     const dotAstro = `\n\n# generated types\n.astro/`;
