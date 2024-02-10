@@ -1,6 +1,6 @@
 {
   "name": "create-nx",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "dependencies": {
     "create-nx-workspace": "18.0.1",
     "tslib": "^2.3.0"

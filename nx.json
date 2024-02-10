@@ -18,6 +18,11 @@
     "sharedGlobals": []
   },
   "targetDefaults": {
+    "nx-release-publish": {
+      "options": {
+        "packageRoot": "dist/packages/{projectName}"
+      }
+    },
     "@nx/js:tsc": {
       "cache": true,
       "dependsOn": [
@@ -69,6 +74,17 @@
     ],
     "projectsRelationship": "fixed",
     "releaseTagPattern": "{version}",
+    "changelog": {
+      "workspaceChangelog": {
+        "createRelease": "github",
+        "file": false
+      },
+      "git": {
+        "commit": false,
+        "stageChanges": false,
+        "tag": false
+      }
+    },
     "version": {
       "conventionalCommits": true
     }

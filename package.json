@@ -3,6 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "prerelease": "nx run-many -t build --all",
+    "release": "ts-node -P ./tools/scripts/tsconfig.release.json ./tools/scripts/release",
     "commit": "npx czg"
   },
   "private": false,

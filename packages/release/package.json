@@ -1,6 +1,6 @@
 {
   "name": "@semantic-versioning/release",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "dependencies": {
     "@nx/devkit": "18.0.1",
     "tslib": "^2.3.0",
