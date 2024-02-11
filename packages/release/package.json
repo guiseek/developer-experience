@@ -7,6 +7,17 @@
     "nx": "18.0.4",
     "semver": "^7.6.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guiseek/developer-experience",
+    "directory": "packages/release"
+  },
+  "private": false,
+  "author": "Guilherme Siquinelli",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "type": "commonjs",
   "main": "./src/index.js",
   "typings": "./src/index.d.ts",
