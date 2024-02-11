@@ -1,8 +1,19 @@
 {
   "name": "@developer-experience/markup",
-  "version": "0.0.1",
+  "version": "0.0.0",
   "dependencies": {
     "tslib": "^2.3.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/guiseek/developer-experience",
+    "directory": "packages/markup"
+  },
+  "private": false,
+  "author": "Guilherme Siquinelli",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
   },
   "type": "commonjs",
   "main": "./src/index.js",
