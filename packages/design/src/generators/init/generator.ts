@@ -13,7 +13,7 @@ function normalizeOptions(options: InitOptions): InitOptions {
 export async function initGenerator(tree: Tree, options: InitOptions) {
   const normalizedOptions = normalizeOptions(options);
 
-  const nxJson = readNxJson(tree);
+  const nxJson = readNxJson(tree) ?? {};
   nxJson.generators = nxJson.generators ?? {};
   nxJson.generators['@developer-experience/design'] = normalizedOptions;
 
