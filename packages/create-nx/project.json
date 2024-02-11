@@ -11,7 +11,29 @@
         "outputPath": "dist/packages/create-nx",
         "main": "packages/create-nx/bin/index.ts",
         "tsConfig": "packages/create-nx/tsconfig.lib.json",
-        "assets": ["packages/create-nx/*.md"]
+        "assets": [
+          "packages/create-nx/*.md",
+          {
+            "input": "./packages/create-nx/src",
+            "glob": "**/!(*.ts)",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/create-nx/src",
+            "glob": "**/*.d.ts",
+            "output": "./src"
+          },
+          {
+            "input": "./packages/create-nx",
+            "glob": "generators.json",
+            "output": "."
+          },
+          {
+            "input": "./packages/create-nx",
+            "glob": "executors.json",
+            "output": "."
+          }
+        ]
       }
     },
     "publish": {

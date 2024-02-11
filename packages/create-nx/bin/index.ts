@@ -17,7 +17,7 @@ async function main() {
 
   // TODO: update below to customize the workspace
   const { directory } = await createWorkspace(
-    `developer-experience@${presetVersion}`,
+    `create-nx@${presetVersion}`,
     {
       name,
       nxCloud: 'skip',
