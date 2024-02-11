@@ -8,7 +8,9 @@ export function readPluginOptions(tree: Tree) {
   let options: InitOptions = { lang: 'en-us' };
 
   if ('@developer-experience/design' in generators) {
-    const initOptions = generators['@developer-experience/design'] as InitOptions;
+    const initOptions = generators[
+      '@developer-experience/design'
+    ] as InitOptions;
 
     if (languages.includes(initOptions.lang)) options = initOptions;
   }
