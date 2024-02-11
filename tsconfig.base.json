@@ -18,8 +18,7 @@
       "@developer-experience/design": ["packages/design/src/index.ts"],
       "@developer-experience/guidekit": ["packages/guidekit/src/index.ts"],
       "@developer-experience/markup": ["packages/markup/src/index.ts"],
-      "@semantic-versioning/release": ["packages/release/src/index.ts"],
-      "developer-experience": ["packages/developer-experience/src/index.ts"]
+      "@semantic-versioning/release": ["packages/release/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
