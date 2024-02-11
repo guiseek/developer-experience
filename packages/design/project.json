@@ -36,9 +36,8 @@
         ]
       }
     },
-    "publish": {
-      "command": "node tools/scripts/publish.mjs design {args.ver} {args.tag}",
-      "dependsOn": ["build"]
+    "lint": {
+      "executor": "@nx/eslint:lint"
     },
     "test": {
       "executor": "@nx/jest:jest",
