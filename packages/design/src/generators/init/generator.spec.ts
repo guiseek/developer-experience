@@ -15,9 +15,13 @@ describe('init generator', () => {
   it('should setup plugin as en-us', async () => {
     await initGenerator(tree, options);
 
-    const nxJson = readNxJson(tree);
+    const nxJson = readNxJson(tree) ?? {};
 
-    const config = nxJson.generators['@developer-experience/design'] as InitOptions;
+    nxJson.generators = { ...(nxJson?.generators ?? {}) };
+
+    const config = nxJson.generators[
+      '@developer-experience/design'
+    ] as InitOptions;
 
     expect(config).toBeDefined();
     expect(config.lang).toBe('en-us');

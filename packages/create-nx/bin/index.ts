@@ -16,14 +16,11 @@ async function main() {
   const presetVersion = require('../package.json').version;
 
   // TODO: update below to customize the workspace
-  const { directory } = await createWorkspace(
-    `create-nx@${presetVersion}`,
-    {
-      name,
-      nxCloud: 'skip',
-      packageManager: detectInvokedPackageManager() ?? 'npm',
-    }
-  );
+  const { directory } = await createWorkspace(`create-nx@${presetVersion}`, {
+    name,
+    nxCloud: 'skip',
+    packageManager: detectInvokedPackageManager() ?? 'npm',
+  });
 
   console.log(`Successfully created the workspace: ${directory}.`);
 }
